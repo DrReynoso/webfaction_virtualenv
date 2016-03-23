@@ -13,7 +13,7 @@ import os, sys, site
 site.addsitedir('/home/reynoso1/webapps/mod_wsgi_3_5/lib/python3.5/site-packages')
 
 #As is
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_demo.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_project.settings")
 
 # Activate the virtualenv
 activate_this = os.path.expanduser("~/webapps/mod_wsgi_3_5/bin/activate_this.py")
@@ -23,11 +23,11 @@ exec(open(activate_this).read())
 #execfile(activate_this, dict(__file__=activate_this))
  
 # Calculate the path based on the location of the WSGI script
-project = '/home/reynoso1/webapps/mod_wsgi_3_5/my_demo/'
+project = '/home/reynoso1/webapps/mod_wsgi_3_5/my_project/'
 workspace = os.path.dirname(project)
 sys.path.append(workspace)
  
-sys.path = ['/home/reynoso1/webapps/mod_wsgi_3_5/my_demo', '/home/reynoso1/webapps/mod_wsgi_3_5/my_demo/my_demo', '/home/reynoso1/webapps/mod_wsgi_3_5'] + sys.path
+sys.path = ['/home/reynoso1/webapps/mod_wsgi_3_5/my_project', '/home/reynoso1/webapps/mod_wsgi_3_5/my_project/my_project', '/home/reynoso1/webapps/mod_wsgi_3_5'] + sys.path
  
 
 from django.core.wsgi import get_wsgi_application
